@@ -4,7 +4,7 @@ A lightweight invite-only access system for WooCommerce.
 
 **Free software. No subscription. No license fee. No nonsense.**
 
-![screenshot](/invites.png)
+![screenshot](/invitesww.png)
 
 ## Requirements
 
