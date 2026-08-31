@@ -1,4 +1,4 @@
-# WooCommerce Invites & Access Control
+# Invites & Access Control for WooCommerce 
 
 A lightweight invite-only access system for WooCommerce.
 
