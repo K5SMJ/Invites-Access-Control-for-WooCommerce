@@ -1,0 +1,186 @@
+        /* Toolbar */
+        .pm-toolbar{
+            display:flex;
+            gap:10px;
+            align-items:center;
+            justify-content:space-between;
+            padding:10px 12px;
+            background:#f6f7f8;
+            border:1px solid #dcdcde;
+            border-radius:8px;
+            margin-bottom:12px;
+            flex-wrap:wrap;
+        }
+        .pm-leftbar{
+            display:flex;
+            gap:8px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+        .pm-filter,
+        .pm-sortbtn{
+            padding:4px 10px;
+            border-radius:6px;
+            border:1px solid #dcdcde;
+            background:#fff;
+            cursor:pointer;
+            font-size:12px;
+            user-select:none;
+        }
+        .pm-filter.is-active,
+        .pm-sortbtn.is-active{
+            background:#111;
+            color:#fff;
+            border-color:#111;
+        }
+        .pm-sort{
+            display:flex;
+            gap:8px;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        /* Accordion shell */
+        .pm-acc{
+            border:1px solid #dcdcde;
+            border-radius:12px;
+            margin:10px 0;
+            background:#fff;
+            overflow:hidden;
+        }
+        .pm-sum{
+            display:grid;
+            grid-template-columns: 1fr auto;
+            gap:12px;
+            padding:12px 16px;
+            background:#f6f7f8;
+            cursor:pointer;
+            align-items:center;
+        }
+        .pm-acc[open]>.pm-sum{ background:#eef0f2; }
+        .pm-sum:hover{ background:#eceff1; }
+
+        /* Purchased overlay tint (keeps pill colors unchanged) */
+        .pm-acc.pm-purchased > .pm-sum{ background:#eaf3ff; }
+        .pm-acc.pm-purchased[open] > .pm-sum{ background:#dfeeff; }
+
+        /* =========================================================
+         * 10) COLUMN CLEANUP (more even padding + alignment)
+         * ========================================================= */
+
+        /* Purchase toggle | Email | Pill | Exp | Token */
+        .pm-left{
+            display:grid;
+            grid-template-columns: 132px minmax(280px, 1fr) 108px 260px 190px;
+            column-gap:18px;
+            align-items:center;
+        }
+        .pm-left > *{ min-width:0; }
+
+        .pm-left strong{
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+        }
+
+        .pm-meta{
+            font-size:12px;
+            color:#666;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .pm-sum > .pm-meta{
+            justify-self:end;
+            padding-left:12px;
+        }
+
+        .pm-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+        .pm-input{ width:100%; padding:8px 10px; }
+
+        code.pm-codechip{
+            display:inline-block;
+            max-width:160px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            vertical-align:middle;
+            background:#f3f4f6;
+            border:1px solid #e5e7eb;
+            padding:2px 6px;
+            border-radius:6px;
+            font-size:12px;
+        }
+
+        /* Token lifecycle pills */
+        .pm-pill{
+            padding:4px 12px;
+            min-width:88px;
+            text-align:center;
+            border-radius:999px;
+            font-weight:800;
+            letter-spacing:0.04em;
+            margin-right:6px;
+            border:1px solid transparent;
+            font-size:12px;
+        }
+        .pm-pill.issued{   background:#dbeafe; color:#1e40af; border-color:#3b82f6; }
+        .pm-pill.redeemed{ background:#e5e7eb; color:#111827; border-color:#9ca3af; }
+        .pm-pill.expired{  background:#fecaca; color:#7f1d1d; border-color:#ef4444; }
+
+						 /* Pill stack: allows Purchased + Status in same column on one line */
+		.pm-pillstack{
+			display:inline-flex;
+			align-items:center;
+			gap:8px;
+			flex-wrap:nowrap;
+		}
+
+		/* Purchased pill (green) */
+		.pm-pill.purchased{
+			background:#dcfce7;
+			color:#14532d;
+			border-color:#16a34a;
+		}
+
+
+        /* Purchase toggle */
+        .pm-purchase-toggle{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:6px;
+            border:1px solid #dcdcde;
+            background:#fff;
+            border-radius:999px;
+            padding:4px 10px;
+            font-size:12px;
+            cursor:pointer;
+            text-decoration:none;
+            color:#111;
+            white-space:nowrap;
+        }
+        .pm-purchase-toggle:hover{ background:#f0f0f1; }
+        .pm-purchase-toggle.is-on{
+            border-color:#16a34a;
+            background:#dcfce7;
+            color:#14532d;
+            font-weight:800;
+        }
+		.pm-purchase-placeholder{ display:inline-block; height:28px; }
+
+		/* 🔢 Count badge (NEW) */
+		.pm-count{
+			display:inline-flex;
+			align-items:center;
+			gap:6px;
+			margin-left:10px;
+			padding:4px 10px;
+			border:1px solid #dcdcde;
+			background:#fff;
+			border-radius:999px;
+			font-size:12px;
+		}
+		.pm-count-num{
+			font-weight:800;
+		}
